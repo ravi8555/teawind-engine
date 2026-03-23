@@ -1,0 +1,55 @@
+{
+  "name": "teawind",
+  "version": "1.0.0",
+  "description": "Lightweight utility-first CSS engine - build UIs with chai-* classes without writing CSS",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "require": "./src/index.js",
+      "default": "./src/index.js"
+    }
+  },
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "css",
+    "tailwind",
+    "utility",
+    "lightweight",
+    "css-framework",
+    "teawind",
+    "chai-classes",
+    "css-engine",
+    "zero-runtime",
+    "utility-first"
+  ],
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com",
+    "url": "https://yourwebsite.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ravi8555/teawind.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ravi8555/teawind/issues"
+  },
+  "homepage": "https://github.com/ravi8555/teawind#readme",
+  "scripts": {
+    "test": "vitest",
+    "build": "echo 'No build needed'",
+    "prepublishOnly": "npm test"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "jsdom": "^23.0.0"
+  }
+}

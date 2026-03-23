@@ -1,0 +1,155 @@
+// // Main entry point for teawind package
+// import { parseDynamicClass, styleMap } from './core/parser.js';
+// import { observeAndApplyStyles } from './core/observer.js';
+
+// // Store original styles for hover effects
+// let hoverStyles = new Map();
+
+// // Apply styles to a single element
+// export function applyStyles(element) {
+//   if (!element || !element.className) return;
+
+//   const classNames = element.className.split(/\s+/);
+//   const styleToApply = {};
+//   const remainingClasses = [];
+
+//   classNames.forEach((className) => {
+//     if (className.startsWith("chai-")) {
+//       const cleanClass = className.replace("chai-", "");
+//       const style = styleMap[cleanClass];
+      
+//       if (style) {
+//         Object.assign(styleToApply, style);
+//       }
+      
+//       parseDynamicClass(cleanClass, styleToApply);
+//     } else {
+//       remainingClasses.push(className);
+//     }
+//   });
+
+//   Object.assign(element.style, styleToApply);
+//   element.className = remainingClasses.join(" ");
+  
+//   // Apply hover effects
+//   applyHoverEffects(element);
+// }
+
+// // Apply hover effects
+// function applyHoverEffects(element) {
+//   const classNames = element.className.split(/\s+/);
+  
+//   classNames.forEach(className => {
+//     if (className === "chai-hover-scale") {
+//       element.addEventListener("mouseenter", () => {
+//         element.style.transform = "scale(1.05)";
+//         element.style.transition = "transform 0.2s";
+//       });
+//       element.addEventListener("mouseleave", () => {
+//         element.style.transform = "scale(1)";
+//       });
+//     }
+    
+//     if (className === "chai-hover-bg-red") {
+//       const originalBg = element.style.backgroundColor;
+//       element.addEventListener("mouseenter", () => {
+//         element.style.backgroundColor = "#ef4444";
+//       });
+//       element.addEventListener("mouseleave", () => {
+//         element.style.backgroundColor = originalBg || "";
+//       });
+//     }
+    
+//     if (className === "chai-hover-text-white") {
+//       const originalColor = element.style.color;
+//       element.addEventListener("mouseenter", () => {
+//         element.style.color = "#ffffff";
+//       });
+//       element.addEventListener("mouseleave", () => {
+//         element.style.color = originalColor || "";
+//       });
+//     }
+    
+//     if (className === "chai-hover-shadow") {
+//       element.addEventListener("mouseenter", () => {
+//         element.style.boxShadow = "0 10px 25px rgba(0,0,0,0.15)";
+//       });
+//       element.addEventListener("mouseleave", () => {
+//         element.style.boxShadow = "";
+//       });
+//     }
+    
+//     if (className === "chai-hover-border") {
+//       element.addEventListener("mouseenter", () => {
+//         element.style.borderColor = "#ef4444";
+//         element.style.borderWidth = "2px";
+//       });
+//       element.addEventListener("mouseleave", () => {
+//         element.style.borderColor = "";
+//         element.style.borderWidth = "";
+//       });
+//     }
+//   });
+// }
+
+// // Initialize Teawind
+// export function initTeawind(container = document.body) {
+//   // Apply to all existing elements
+//   document.querySelectorAll('[class]').forEach(ele => {
+//     applyStyles(ele);
+//   });
+
+//   // Watch for new elements
+//   const observer = new MutationObserver(mutations => {
+//     mutations.forEach(mutation => {
+//       mutation.addedNodes.forEach(node => {
+//         if (node.nodeType === 1 && node.hasAttribute && node.hasAttribute('class')) {
+//           applyStyles(node);
+//         }
+//       });
+//     });
+//   });
+  
+//   observer.observe(container, { childList: true, subtree: true });
+  
+//   console.log('🍵 Teawind CSS Engine initialized!');
+// }
+
+// // Default export
+// export default {
+//   init: initTeawind,
+//   applyStyles,
+//   version: '1.0.0'
+// };
+
+
+/**
+ * Teawind CSS Engine - Main Entry Point
+ */
+
+import { styleMap, parseDynamicClass } from './core/parser.js';
+import { injectStyles, keyframes } from './core/styles.js';
+import { initObserver } from './core/observer.js';
+
+// Inject base styles when the engine loads
+if (typeof document !== 'undefined') {
+  injectStyles();
+}
+
+// Export everything
+export { styleMap, parseDynamicClass };
+export { initObserver };
+export { injectStyles, keyframes };
+
+// Main initialization function
+export function initTeawind(container = document.body, options = {}) {
+  return initObserver(container, options);
+}
+
+// Default export
+export default {
+  init: initTeawind,
+  injectStyles,
+  keyframes,
+  version: '1.0.0'
+};

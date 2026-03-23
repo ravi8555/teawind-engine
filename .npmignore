@@ -1,0 +1,36 @@
+# Test files
+test/
+*.test.js
+*.test.html
+
+# Development files
+node_modules/
+.git/
+.github/
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# Build files (if any)
+dist/
+build/
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Git files
+.gitignore
+.gitattributes
