@@ -1,6 +1,6 @@
 {
   "name": "teawind-engine",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Lightweight utility-first CSS engine",
   "main": "src/index.js",
   "type": "module",
