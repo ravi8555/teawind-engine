@@ -18,6 +18,9 @@ A lightweight utility-first CSS engine. Build UIs using `chai-*` classes without
 ## 📦 Installation
 
 ### NPM
+```plaintext
+https://www.npmjs.com/package/teawind-engine
+```
 
 ```bash
 npm install teawind-engine
@@ -37,6 +40,14 @@ npm install teawind-engine
 ```plaintext
 git clone https://github.com/ravi8555/teawind-engine.git
 ```
+### **Demo**
+
+```plaintext
+git clone https://github.com/ravi8555/teawind-engine.git
+```
+### **Demo**
+
+https://teawind-engine-wesite.vercel.app/
 
 ### **🚀 Usage**
 
