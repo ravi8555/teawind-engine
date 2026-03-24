@@ -27,7 +27,7 @@ npm install teawind-engine
 
 ```plaintext
 <script type="module">
-  import { initTeawind } from 'https://cdn.jsdelivr.net/npm/teawind-engine@1.0.0/src/index.js';
+  import { initTeawind } from 'https://cdn.jsdelivr.net/npm/teawind-engine@1.0.2/src/index.js';
   initTeawind();
 </script>
 ```
