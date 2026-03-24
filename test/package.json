@@ -1,0 +1,17 @@
+{
+  "name": "teawind-tests",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:manual": "node manual-test.js",
+    "test:browser": "npx http-server -o test/index.html"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "jsdom": "^23.0.0",
+    "@vitest/ui": "^1.0.0",
+    "http-server": "^14.1.1"
+  }
+}

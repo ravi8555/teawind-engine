@@ -1,55 +1,25 @@
 {
-  "name": "teawind",
-  "version": "1.0.0",
-  "description": "Lightweight utility-first CSS engine - build UIs with chai-* classes without writing CSS",
+  "name": "teawind-engine",
+  "version": "1.0.1",
+  "description": "Lightweight utility-first CSS engine",
   "main": "src/index.js",
-  "module": "src/index.js",
   "type": "module",
-  "exports": {
-    ".": {
-      "import": "./src/index.js",
-      "require": "./src/index.js",
-      "default": "./src/index.js"
-    }
-  },
-  "files": [
-    "src",
-    "README.md",
-    "LICENSE"
-  ],
-  "keywords": [
-    "css",
-    "tailwind",
-    "utility",
-    "lightweight",
-    "css-framework",
-    "teawind",
-    "chai-classes",
-    "css-engine",
-    "zero-runtime",
-    "utility-first"
-  ],
-  "author": {
-    "name": "Your Name",
-    "email": "your.email@example.com",
-    "url": "https://yourwebsite.com"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ravi8555/teawind.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ravi8555/teawind/issues"
-  },
-  "homepage": "https://github.com/ravi8555/teawind#readme",
   "scripts": {
     "test": "vitest",
-    "build": "echo 'No build needed'",
-    "prepublishOnly": "npm test"
+    "test:run": "vitest run",
+    "test:ui": "vitest --ui"
+  },
+  "vitest": {
+    "environment": "jsdom",
+    "globals": true,
+    "include": ["test/**/*.test.js"]
   },
   "devDependencies": {
-    "vitest": "^1.0.0",
-    "jsdom": "^23.0.0"
-  }
+    "vitest": "^1.6.0",
+    "jsdom": "^23.0.0",
+    "@vitest/ui": "^1.6.0"
+  },
+  "keywords": ["css", "utility", "teawind", "tailwind"],
+  "author": "Ravindra Dhadave",
+  "license": "MIT"
 }
