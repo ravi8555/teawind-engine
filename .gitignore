@@ -1,3 +1,5 @@
+/test
+
 # Logs
 logs
 *.log
@@ -143,4 +145,4 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
 
-/test
+

@@ -2,116 +2,116 @@
 
 A lightweight utility-first CSS engine. Build UIs using `chai-*` classes without writing CSS!
 
-## Installation
+* * *
+
+## 📦🍵 Teawind CSS
+
+A lightweight utility-first CSS engine. Build UIs using `chai-*` classes without writing CSS!
+
+* * *
+
+## 📦 Installation
+
+### Via npm
 
 ```bash
 npm install teawind
+```
 
-Or via CDN:
+## Available Classes
 
-<script type="module">
-  import { initTeawind } from 'https://cdn.jsdelivr.net/npm/teawind@1.0.0/src/index.js';
-  initTeawind();
-</script>
+### Colors
 
-Usage
-
-Basic Setup
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Teawind Demo</title>
-  <script type="module">
-    import { initTeawind } from 'teawind';
+*   `chai-bg-red`, `chai-bg-blue`, `chai-bg-green`, `chai-bg-yellow`, `chai-bg-gray`, `chai-bg-black`, `chai-bg-white`
     
-    // Initialize the engine
-    initTeawind();
-  </script>
-</head>
-<body>
-  <div class="chai-bg-red chai-text-white chai-p-20 chai-rounded-10">
-    Hello Teawind!
-  </div>
-</body>
-</html>
+*   `chai-text-red`, `chai-text-blue`, `chai-text-green`, `chai-text-yellow`, `chai-text-gray`, `chai-text-black`, `chai-text-white`
+    
 
-Available Classes
-Colors
-chai-bg-red, chai-bg-blue, chai-bg-green, chai-bg-yellow, chai-bg-gray, chai-bg-black, chai-bg-white
+### Spacing (1 unit = 4px)
 
-chai-text-red, chai-text-blue, chai-text-green, chai-text-yellow, chai-text-gray, chai-text-black, chai-text-white
+*   `chai-p-10` → padding: 40px
+    
+*   `chai-m-20` → margin: 80px
+    
+*   `chai-px-30` → padding-left/right: 120px
+    
+*   `chai-py-15` → padding-top/bottom: 60px
+    
 
-Spacing (1 unit = 4px)
-chai-p-10 → padding: 40px
+### Typography
 
-chai-m-20 → margin: 80px
+*   `chai-text-16`, `chai-text-24` → font size
+    
+*   `chai-font-bold` → bold text
+    
+*   `chai-text-center`, `chai-text-left`, `chai-text-right` → text alignment
+    
 
-chai-px-30 → padding-left/right: 120px
+### Layout
 
-chai-py-15 → padding-top/bottom: 60px
+*   `chai-flex`, `chai-flex-col`, `chai-flex-center`
+    
+*   `chai-justify-between`
+    
+*   `chai-gap-10`
+    
 
-Typography
-chai-text-16, chai-text-24 → font size
+### Borders
 
-chai-font-bold → bold text
+*   `chai-border-2`, `chai-border-4`
+    
+*   `chai-rounded-10`, `chai-rounded-20`
+    
+*   `chai-border-red`
+    
 
-chai-text-center, chai-text-left, chai-text-right → text alignment
+### Transforms
 
-Layout
-chai-flex, chai-flex-col, chai-flex-center
+*   `chai-scale-1`, `chai-scale-2`, `chai-scale-3`
+    
+*   `chai-rotate-45`, `chai-rotate-90`
+    
 
-chai-justify-between
+### Hover Effects
 
-chai-gap-10
+*   `chai-hover-scale` → zoom effect
+    
+*   `chai-hover-bg-red` → background change
+    
+*   `chai-hover-text-white` → text color change
+    
+*   `chai-hover-shadow` → shadow effect
+    
+*   `chai-hover-border` → border effect
+    
 
-Borders
-chai-border-2, chai-border-4
+## API
 
-chai-rounded-10, chai-rounded-20
+### `initTeawind(container)`
 
-chai-border-red
-
-Transforms
-chai-scale-2, chai-scale-3, chai-scale-1
-
-chai-rotate-45, chai-rotate-90
-
-Hover Effects
-chai-hover-scale → zoom effect
-
-chai-hover-bg-red → background change
-
-chai-hover-text-white → text color change
-
-chai-hover-shadow → shadow effect
-
-chai-hover-border → border effect
-
-API
-initTeawind(container)
-Initializes Teawind on the specified container (defaults to document.body).
+Initializes Teawind on the specified container (defaults to `document.body`).
 
 javascript
+
+```plaintext
 import { initTeawind } from 'teawind';
 initTeawind();
-applyStyles(element)
+```
+
+### `applyStyles(element)`
+
 Manually apply Teawind styles to an element.
 
-javascript
+```plaintext
 import { applyStyles } from 'teawind';
 const element = document.querySelector('.my-element');
 applyStyles(element);
-License
-MIT
+```
 
-text
+License MIT
 
-### 3. **Create `.npmignore`**
-node_modules/
-test/
-*.log
-.DS_Store
-.git/
-.github/
-.vscode/
+🗂️ .npmignore Code node\_modules/ test/ \*.log .DS\_Store .git/ .github/ .vscode/ Code
+
+👉 The key fix is making sure every code block starts with triple backticks (\`\`\`), has the correct language hint (`bash`, `html`, `javascript`), and ends with triple backticks. Without those closing backticks, Markdown “leaks” and the rest of the file shows as plain text.
+
+Do you want me to also add **badges** (npm version, GitHub stars, license) at the very top so it looks more professional on GitHub?
